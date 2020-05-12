@@ -1,0 +1,2 @@
+3个actor，3个learner，1个buffer。
+一个actor对应一个learner，每个learner每次取到的样本不一样，buffer取三份不同的样本，分别给三个不同的learner

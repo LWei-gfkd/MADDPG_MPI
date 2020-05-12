@@ -1,0 +1,13 @@
+train_woMPI：林杨飞修改的actor、buffer、learner分离的初始代码
+
+train_asyncMPI(L=M=N=1)：是用MPI实现actor、buffer、learner三部分的异步
+train_asyncMPI(L=M=N=1)_time：基于train_MPI，输出一些中间时间
+
+train_asyncMPI(L=M=N=1)_pickle：用pickle序列化实现train_mpi（效果不理想，未完成）
+
+train_asyncMPI(L=3,M=N=1)：L=3，M=N=1，指定actor数量L=3，learner非阻塞点对点传播给3个actor，buffer非阻塞点对点接收3个actor数据。
+train_asyncMPI(L=5,M=N=1)：L=5，M=N=1，指定actor数量L=5，learner非阻塞点对点传播给5个actor，buffer非阻塞点对点接收5个actor数据。
+
+train_asyncMPI(L=3,M=N=1)_bcast:L>1，M=N=1，learner进行广播的模式（还在实现中）
+
+train_asyncMPI(L=3,M=3,N=1)：L=3，M=1, N=3，指定actor数量L=3，learner数量N=3，一个learner对应一个actor
